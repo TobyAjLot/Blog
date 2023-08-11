@@ -27,8 +27,6 @@ const postSchema = {
 
 const Post = mongoose.model("Post", postSchema);
 
-mongoose.set("bufferCommands", false);
-
 app.get("/", function (req, res) {
   Post.find({})
     .then(function (posts) {
